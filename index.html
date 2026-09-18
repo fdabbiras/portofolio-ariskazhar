@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ariska Devina Azharyani | Modest Fashion Creator</title>
@@ -9,9 +11,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+rel="stylesheet">
+
 
 <style>
+
+/* =========================================================
+   ROOT
+========================================================= */
 
 :root{
     --paper:#f3f1ea;
@@ -23,6 +32,11 @@
     --muted:#73736d;
     --white:#faf9f5;
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
     margin:0;
@@ -52,9 +66,10 @@ a{
     text-decoration:none;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+
+/* =========================================================
+   NAV
+========================================================= */
 
 .nav{
     position:fixed;
@@ -63,11 +78,9 @@ a{
     width:100%;
     height:74px;
     padding:0 4.5vw;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
-
     z-index:1000;
 
     background:rgba(243,241,234,.88);
@@ -111,7 +124,6 @@ a{
     padding:11px 17px;
     background:var(--ink);
     color:var(--paper);
-
     font-size:9px;
     font-weight:700;
     letter-spacing:1.4px;
@@ -128,7 +140,6 @@ a{
     padding:9px 13px;
     background:var(--ink);
     color:var(--paper);
-
     font-size:8px;
     font-weight:700;
     letter-spacing:1px;
@@ -137,16 +148,13 @@ a{
 .menu-btn{
     width:38px;
     height:38px;
-
     border:1px solid rgba(23,24,23,.2);
     background:transparent;
-
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     gap:5px;
-
     cursor:pointer;
 }
 
@@ -156,22 +164,19 @@ a{
     background:var(--ink);
 }
 
-/* =========================
+
+/* =========================================================
    MOBILE MENU
-========================= */
+========================================================= */
 
 .mobile-menu{
     position:fixed;
     top:74px;
     left:0;
-
     width:100%;
     height:calc(100vh - 74px);
-
     background:var(--paper);
-
     z-index:999;
-
     padding:35px 6vw;
 
     transform:translateX(100%);
@@ -184,24 +189,20 @@ a{
 
 .mobile-menu a{
     display:block;
-
     font-size:31px;
     line-height:1.4;
-
     font-family:"Playfair Display",serif;
-
     border-bottom:1px solid rgba(23,24,23,.12);
-
     padding:15px 0;
 }
 
-/* =========================
+
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero{
     min-height:100vh;
-
     padding:105px 4.5vw 45px;
 
     display:grid;
@@ -214,11 +215,9 @@ a{
 
 .hero-left{
     min-height:620px;
-
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-
     position:relative;
 }
 
@@ -231,14 +230,12 @@ a{
     text-transform:uppercase;
     letter-spacing:1.7px;
     font-weight:700;
-
     color:var(--muted);
 }
 
 .hero-title-wrap{
     position:relative;
     z-index:4;
-
     margin-top:auto;
     margin-bottom:auto;
 }
@@ -258,10 +255,8 @@ a{
 
 .hero-kicker:before{
     content:"";
-
     width:24px;
     height:1px;
-
     background:var(--ink);
 }
 
@@ -269,18 +264,14 @@ a{
     font-family:"Playfair Display",serif;
 
     font-size:clamp(70px,9vw,138px);
-
     line-height:.78;
     letter-spacing:-7px;
-
     font-weight:400;
 }
 
 .hero h1 em{
     display:block;
-
     margin-left:10vw;
-
     color:var(--burgundy);
 }
 
@@ -288,7 +279,6 @@ a{
     display:flex;
     justify-content:space-between;
     align-items:flex-end;
-
     gap:25px;
 }
 
@@ -297,7 +287,6 @@ a{
 
     font-size:11px;
     line-height:1.7;
-
     color:var(--muted);
 }
 
@@ -308,7 +297,6 @@ a{
 
     font-size:8px;
     font-weight:700;
-
     letter-spacing:1.5px;
     text-transform:uppercase;
 }
@@ -316,17 +304,11 @@ a{
 .hero-scroll span{
     width:28px;
     height:1px;
-
     background:var(--ink);
 }
 
-/* =========================
-   HERO IMAGES
-========================= */
-
 .hero-right{
     position:relative;
-
     min-height:620px;
 
     display:flex;
@@ -340,15 +322,12 @@ a{
 
     position:relative;
     z-index:2;
-
     overflow:hidden;
 }
 
 .hero-main-image img{
     height:100%;
-
-    transition:
-        transform 1.2s cubic-bezier(.2,.7,.2,1);
+    transition:transform 1.2s cubic-bezier(.2,.7,.2,1);
 }
 
 .hero-main-image:hover img{
@@ -365,7 +344,6 @@ a{
     bottom:50px;
 
     z-index:4;
-
     overflow:hidden;
 
     border:7px solid var(--paper);
@@ -415,7 +393,6 @@ a{
 
     font-size:8px;
     line-height:1.5;
-
     font-weight:700;
 
     text-transform:uppercase;
@@ -426,14 +403,11 @@ a{
 
 .hero-number{
     position:absolute;
-
     right:-4px;
     bottom:0;
 
     font-size:9px;
-
     font-weight:700;
-
     letter-spacing:1.5px;
 
     color:var(--muted);
@@ -449,9 +423,7 @@ a{
     transform-origin:right center;
 
     font-size:8px;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
 
     color:var(--muted);
@@ -459,9 +431,10 @@ a{
     z-index:6;
 }
 
-/* =========================
+
+/* =========================================================
    MARQUEE
-========================= */
+========================================================= */
 
 .marquee{
     overflow:hidden;
@@ -476,17 +449,13 @@ a{
 
 .marquee-track{
     display:inline-block;
-
     animation:marquee 22s linear infinite;
 }
 
 .marquee span{
     font-size:10px;
-
     font-weight:700;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
 
     margin:0 28px;
@@ -494,10 +463,7 @@ a{
 
 .marquee i{
     font-family:"Playfair Display",serif;
-
     font-size:17px;
-
-    font-weight:400;
 }
 
 @keyframes marquee{
@@ -512,9 +478,10 @@ a{
 
 }
 
-/* =========================
+
+/* =========================================================
    GENERAL SECTION
-========================= */
+========================================================= */
 
 .section{
     padding:110px 4.5vw;
@@ -522,7 +489,6 @@ a{
 
 .section-header{
     display:flex;
-
     justify-content:space-between;
     align-items:flex-start;
 
@@ -531,25 +497,18 @@ a{
 
 .section-label{
     font-size:9px;
-
     text-transform:uppercase;
-
     letter-spacing:2px;
-
     font-weight:700;
 }
 
 .section-number{
     font-family:"Playfair Display",serif;
-
     font-size:45px;
-
-    line-height:1;
 }
 
 .reveal{
     opacity:0;
-
     transform:translateY(30px);
 
     transition:
@@ -559,17 +518,16 @@ a{
 
 .reveal.visible{
     opacity:1;
-
     transform:translateY(0);
 }
 
-/* =========================
+
+/* =========================================================
    ABOUT
-========================= */
+========================================================= */
 
 .about{
     display:grid;
-
     grid-template-columns:.8fr 1.2fr;
 
     gap:9vw;
@@ -579,7 +537,6 @@ a{
 
 .about-image{
     height:570px;
-
     position:relative;
 }
 
@@ -625,7 +582,6 @@ a{
     max-width:520px;
 
     font-size:13px;
-
     line-height:1.9;
 
     color:var(--muted);
@@ -635,7 +591,6 @@ a{
     margin-top:45px;
 
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
 
     border-top:1px solid rgba(23,24,23,.15);
@@ -647,7 +602,6 @@ a{
     font-size:9px;
 
     text-transform:uppercase;
-
     letter-spacing:1.2px;
 
     font-weight:700;
@@ -663,9 +617,10 @@ a{
     font-weight:500;
 }
 
-/* =========================
-   STYLE DIRECTIONS
-========================= */
+
+/* =========================================================
+   STYLE DIRECTION
+========================================================= */
 
 .style-grid{
     display:grid;
@@ -677,7 +632,6 @@ a{
 
 .style-card{
     position:relative;
-
     overflow:hidden;
 }
 
@@ -691,7 +645,6 @@ a{
 
 .style-image{
     height:460px;
-
     overflow:hidden;
 }
 
@@ -734,9 +687,10 @@ a{
     color:var(--muted);
 }
 
-/* =========================
-   TIKTOK SECTION
-========================= */
+
+/* =========================================================
+   TIKTOK
+========================================================= */
 
 .social-section{
     background:var(--white);
@@ -776,10 +730,6 @@ a{
 
     color:var(--muted);
 }
-
-/* =========================
-   TIKTOK CARDS
-========================= */
 
 .social-feed{
     display:grid;
@@ -830,15 +780,6 @@ a{
     border:0;
 }
 
-/*
-   Photo post #1 may have a different natural
-   presentation inside TikTok.
-*/
-
-.tiktok-card.photo-post .tiktok-frame{
-    background:#111;
-}
-
 .tiktok-meta{
     display:flex;
 
@@ -885,10 +826,6 @@ a{
     opacity:.5;
 }
 
-/* =========================
-   SOCIAL BUTTONS
-========================= */
-
 .social-buttons{
     display:flex;
 
@@ -928,9 +865,10 @@ a{
     transform:translateY(-2px);
 }
 
-/* =========================
+
+/* =========================================================
    STATEMENT
-========================= */
+========================================================= */
 
 .statement{
     padding:130px 4.5vw;
@@ -1000,100 +938,266 @@ a{
     letter-spacing:-2px;
 }
 
-/* =========================
+
+/* =========================================================
    LOOKBOOK
-========================= */
+   NEW EDITORIAL COLLAGE
+========================================================= */
 
-.lookbook-grid{
-    display:grid;
-
-    grid-template-columns:1.15fr .85fr;
-
-    gap:15px;
+.lookbook-section{
+    padding-bottom:125px;
 }
 
-.lookbook-main{
-    height:700px;
+.lookbook-intro{
+    display:flex;
 
-    overflow:hidden;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    margin-bottom:50px;
 }
 
-.lookbook-main img{
-    height:100%;
-
-    transition:transform 1s ease;
-}
-
-.lookbook-side{
-    display:grid;
-
-    grid-template-rows:1fr 1fr;
-
-    gap:15px;
-}
-
-.lookbook-side div{
-    overflow:hidden;
-}
-
-.lookbook-side img{
-    height:100%;
-
-    transition:transform 1s ease;
-}
-
-.lookbook-main:hover img,
-.lookbook-side div:hover img{
-    transform:scale(1.035);
-}
-
-/* =========================
-   SKILLS
-========================= */
-
-.skills{
-    border-top:1px solid rgba(23,24,23,.15);
-}
-
-.skill-row{
-    display:grid;
-
-    grid-template-columns:80px 1fr 1fr;
-
-    align-items:center;
-
-    border-bottom:1px solid rgba(23,24,23,.15);
-
-    padding:25px 0;
-}
-
-.skill-number{
+.lookbook-intro h2{
     font-family:"Playfair Display",serif;
 
-    font-size:24px;
+    font-size:clamp(48px,6vw,82px);
+
+    line-height:.88;
+
+    font-weight:400;
+
+    letter-spacing:-4px;
 }
 
-.skill-name{
-    font-family:"Playfair Display",serif;
-
-    font-size:29px;
+.lookbook-intro h2 em{
+    color:var(--burgundy);
 }
 
-.skill-detail{
-    text-align:right;
+.lookbook-intro p{
+    width:260px;
 
-    font-size:9px;
+    font-size:10px;
 
-    text-transform:uppercase;
-
-    letter-spacing:1.2px;
+    line-height:1.7;
 
     color:var(--muted);
 }
 
-/* =========================
+
+/* COLLAGE */
+
+.lookbook-collage{
+    display:grid;
+
+    grid-template-columns:1.05fr .7fr .7fr;
+
+    gap:15px;
+
+    align-items:start;
+}
+
+
+.lookbook-item{
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--soft);
+}
+
+
+.lookbook-item img{
+    width:100%;
+    height:100%;
+
+    transition:
+        transform 1s cubic-bezier(.2,.7,.2,1);
+}
+
+
+.lookbook-item:hover img{
+    transform:scale(1.035);
+}
+
+
+/* BIG IMAGE */
+
+.lookbook-large{
+    height:650px;
+}
+
+
+/* CENTER */
+
+.lookbook-medium{
+    height:480px;
+
+    margin-top:95px;
+}
+
+
+/* RIGHT */
+
+.lookbook-small{
+    height:380px;
+
+    margin-top:15px;
+}
+
+
+/* LITTLE LABELS */
+
+.lookbook-tag{
+    position:absolute;
+
+    left:16px;
+    bottom:16px;
+
+    z-index:4;
+
+    padding:8px 10px;
+
+    background:rgba(250,249,245,.92);
+
+    backdrop-filter:blur(8px);
+
+    font-size:7px;
+
+    font-weight:700;
+
+    letter-spacing:1.2px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   SKILLS
+   NEW COMPACT EDITORIAL STYLE
+========================================================= */
+
+.skills-section{
+    background:var(--paper);
+    padding-top:95px;
+    padding-bottom:100px;
+}
+
+
+.skills-heading{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    margin-bottom:38px;
+}
+
+
+.skills-heading h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(45px,5vw,70px);
+
+    line-height:.9;
+
+    font-weight:400;
+
+    letter-spacing:-3px;
+}
+
+
+.skills-heading h2 em{
+    color:var(--burgundy);
+}
+
+
+.skills-heading p{
+    width:260px;
+
+    font-size:10px;
+
+    line-height:1.7;
+
+    color:var(--muted);
+}
+
+
+/* 2 COLUMN */
+
+.skills-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    column-gap:70px;
+
+    border-top:1px solid rgba(23,24,23,.18);
+}
+
+
+/* SKILL */
+
+.skill-item{
+    display:grid;
+
+    grid-template-columns:38px 1fr auto;
+
+    align-items:center;
+
+    gap:13px;
+
+    min-height:76px;
+
+    border-bottom:1px solid rgba(23,24,23,.14);
+
+    transition:.3s;
+}
+
+
+.skill-item:hover{
+    padding-left:7px;
+}
+
+
+.skill-number{
+    font-size:8px;
+
+    font-weight:700;
+
+    color:var(--muted);
+
+    letter-spacing:1px;
+}
+
+
+.skill-name{
+    font-family:"Playfair Display",serif;
+
+    font-size:21px;
+
+    font-weight:400;
+}
+
+
+.skill-detail{
+    font-size:7px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    color:var(--muted);
+
+    text-align:right;
+}
+
+
+/* =========================================================
    CONTACT
-========================= */
+========================================================= */
 
 .contact{
     background:var(--sage);
@@ -1165,9 +1269,10 @@ a{
     font-weight:700;
 }
 
-/* =========================
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer{
     padding:25px 4.5vw;
@@ -1179,6 +1284,7 @@ footer{
     display:flex;
 
     justify-content:space-between;
+
     align-items:center;
 
     font-size:8px;
@@ -1192,9 +1298,10 @@ footer span{
     opacity:.55;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media(max-width:1100px){
 
@@ -1215,10 +1322,27 @@ footer span{
     }
 
     .skill-name{
-        font-size:25px;
+        font-size:19px;
+    }
+
+    .lookbook-large{
+        height:560px;
+    }
+
+    .lookbook-medium{
+        height:410px;
+    }
+
+    .lookbook-small{
+        height:320px;
     }
 
 }
+
+
+/* =========================================================
+   950px
+========================================================= */
 
 @media(max-width:950px){
 
@@ -1265,7 +1389,6 @@ footer span{
 
     .about{
         grid-template-columns:1fr 1fr;
-
         gap:5vw;
     }
 
@@ -1279,9 +1402,7 @@ footer span{
 
     .style-card:nth-child(3){
         grid-column:span 2;
-
         width:50%;
-
         margin-left:auto;
     }
 
@@ -1294,13 +1415,41 @@ footer span{
         margin-top:45px;
     }
 
-    .lookbook-grid{
-        grid-template-columns:1fr;
+
+    /* LOOKBOOK */
+
+    .lookbook-collage{
+        grid-template-columns:1fr 1fr;
     }
 
-    .lookbook-main{
+    .lookbook-large{
         height:600px;
     }
+
+    .lookbook-medium{
+        height:430px;
+        margin-top:0;
+    }
+
+    .lookbook-small{
+        grid-column:span 2;
+
+        height:360px;
+
+        width:55%;
+
+        margin-left:auto;
+
+        margin-top:15px;
+    }
+
+
+    /* SKILLS */
+
+    .skills-grid{
+        column-gap:35px;
+    }
+
 
     .contact-inner{
         grid-template-columns:1fr;
@@ -1309,6 +1458,11 @@ footer span{
     }
 
 }
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media(max-width:600px){
 
@@ -1328,6 +1482,9 @@ footer span{
         display:none;
     }
 
+
+    /* HERO */
+
     .hero{
         padding:94px 5vw 35px;
 
@@ -1344,7 +1501,6 @@ footer span{
 
     .hero-title-wrap{
         margin-top:70px;
-
         margin-bottom:65px;
     }
 
@@ -1362,7 +1518,6 @@ footer span{
 
     .hero-description{
         width:230px;
-
         font-size:10px;
     }
 
@@ -1376,17 +1531,14 @@ footer span{
 
     .hero-main-image{
         width:76%;
-
         height:430px;
     }
 
     .hero-small-image{
         width:34%;
-
         height:170px;
 
         left:0;
-
         bottom:28px;
 
         border-width:5px;
@@ -1394,21 +1546,17 @@ footer span{
 
     .hero-circle{
         width:120px;
-
         height:120px;
 
         top:25px;
-
         right:0;
     }
 
     .hero-sticker{
         width:82px;
-
         height:82px;
 
         right:0;
-
         bottom:45px;
 
         font-size:6px;
@@ -1417,6 +1565,9 @@ footer span{
     .hero-side-text{
         display:none;
     }
+
+
+    /* GENERAL */
 
     .section{
         padding:75px 5vw;
@@ -1430,21 +1581,21 @@ footer span{
         font-size:32px;
     }
 
+
+    /* ABOUT */
+
     .about{
         grid-template-columns:1fr;
-
         gap:45px;
     }
 
     .about-image{
         height:470px;
-
         width:88%;
     }
 
     .about-copy h2{
         font-size:51px;
-
         letter-spacing:-2.5px;
     }
 
@@ -1460,22 +1611,26 @@ footer span{
         font-size:7px;
     }
 
+
+    /* STYLE */
+
     .style-grid{
         grid-template-columns:1fr;
-
         gap:40px;
     }
 
     .style-card:nth-child(2),
     .style-card:nth-child(3){
         margin-top:0;
-
         width:100%;
     }
 
     .style-image{
         height:480px;
     }
+
+
+    /* TIKTOK */
 
     .social-intro{
         display:block;
@@ -1491,13 +1646,11 @@ footer span{
 
     .social-intro p{
         width:100%;
-
         max-width:310px;
     }
 
     .social-feed{
         grid-template-columns:1fr 1fr;
-
         gap:12px;
     }
 
@@ -1509,21 +1662,21 @@ footer span{
 
     .tiktok-meta{
         font-size:6.5px;
-
         letter-spacing:.8px;
     }
 
     .tiktok-link{
         font-size:6.5px;
-
         letter-spacing:.7px;
     }
 
     .social-buttons{
         margin-top:35px;
-
         flex-wrap:wrap;
     }
+
+
+    /* STATEMENT */
 
     .statement{
         padding:90px 6vw;
@@ -1531,39 +1684,123 @@ footer span{
 
     .statement p{
         font-size:38px;
-
         letter-spacing:-1px;
     }
 
-    .lookbook-main{
-        height:500px;
+
+    /* LOOKBOOK */
+
+    .lookbook-section{
+        padding-bottom:80px;
     }
 
-    .lookbook-side{
-        height:500px;
+    .lookbook-intro{
+        display:block;
+        margin-bottom:35px;
     }
 
-    .skill-row{
-        grid-template-columns:40px 1fr;
+    .lookbook-intro h2{
+        font-size:58px;
+
+        margin-bottom:25px;
+    }
+
+    .lookbook-intro p{
+        width:100%;
+        max-width:300px;
+    }
+
+    .lookbook-collage{
+        display:grid;
+
+        grid-template-columns:1.1fr .9fr;
+
+        gap:10px;
+    }
+
+    .lookbook-large{
+        height:470px;
+    }
+
+    .lookbook-medium{
+        height:350px;
+        margin-top:65px;
+    }
+
+    .lookbook-small{
+        grid-column:span 2;
+
+        width:72%;
+
+        height:270px;
+
+        margin-left:auto;
+
+        margin-top:0;
+    }
+
+    .lookbook-tag{
+        left:10px;
+        bottom:10px;
+
+        font-size:6px;
+
+        padding:7px 8px;
+    }
+
+
+    /* SKILLS */
+
+    .skills-section{
+        padding-top:75px;
+        padding-bottom:75px;
+    }
+
+    .skills-heading{
+        display:block;
+
+        margin-bottom:28px;
+    }
+
+    .skills-heading h2{
+        font-size:52px;
+
+        margin-bottom:22px;
+    }
+
+    .skills-heading p{
+        width:100%;
+        max-width:300px;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr;
+
+        column-gap:0;
+    }
+
+    .skill-item{
+        grid-template-columns:30px 1fr auto;
+
+        min-height:64px;
 
         gap:10px;
     }
 
     .skill-number{
-        font-size:19px;
+        font-size:7px;
     }
 
     .skill-name{
-        font-size:22px;
+        font-size:19px;
     }
 
     .skill-detail{
-        grid-column:2;
-
-        text-align:left;
-
-        margin-top:-5px;
+        font-size:6px;
     }
+
+
+    /* CONTACT */
 
     .contact{
         padding:75px 5vw;
@@ -1587,6 +1824,9 @@ footer span{
         flex-direction:column;
     }
 
+
+    /* FOOTER */
+
     footer{
         padding:22px 5vw;
 
@@ -1600,40 +1840,63 @@ footer span{
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- =====================================================
+     NAV
+===================================================== -->
 
 <nav class="nav">
 
+
     <a href="#home" class="logo">
+
         ARISKA <span>Devina</span>
+
     </a>
+
 
     <div class="nav-links">
 
         <a href="#about">About</a>
+
         <a href="#style">Style</a>
+
         <a href="#social">Content</a>
+
         <a href="#lookbook">Lookbook</a>
+
+        <a href="#skills">Skills</a>
+
         <a href="#contact">Contact</a>
 
     </div>
 
-    <a href="#contact" class="nav-cta">
+
+    <a
+        href="#contact"
+        class="nav-cta">
+
         Let's Work
+
     </a>
+
 
     <div class="mobile-nav-right">
 
-        <a href="#contact" class="mobile-work">
+        <a
+            href="#contact"
+            class="mobile-work">
+
             Let's Work
+
         </a>
+
 
         <button
             class="menu-btn"
@@ -1650,28 +1913,59 @@ footer span{
 </nav>
 
 
-<!-- =========================
+<!-- =====================================================
      MOBILE MENU
-========================= -->
+===================================================== -->
 
-<div class="mobile-menu" id="mobileMenu">
+<div
+    class="mobile-menu"
+    id="mobileMenu">
 
-    <a href="#about">About</a>
-    <a href="#style">Style</a>
-    <a href="#social">Content</a>
-    <a href="#lookbook">Lookbook</a>
-    <a href="#contact">Let's Work</a>
+
+    <a href="#about">
+        About
+    </a>
+
+
+    <a href="#style">
+        Style
+    </a>
+
+
+    <a href="#social">
+        Content
+    </a>
+
+
+    <a href="#lookbook">
+        Lookbook
+    </a>
+
+
+    <a href="#skills">
+        Skills
+    </a>
+
+
+    <a href="#contact">
+        Let's Work
+    </a>
+
 
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
-<section class="hero" id="home">
+<section
+    class="hero"
+    id="home">
+
 
     <div class="hero-left">
+
 
         <div class="hero-topline">
 
@@ -1686,11 +1980,16 @@ footer span{
         </div>
 
 
-        <div class="hero-title-wrap reveal">
+        <div
+            class="hero-title-wrap reveal">
+
 
             <div class="hero-kicker">
+
                 Fashion / Content / Storytelling
+
             </div>
+
 
             <h1>
 
@@ -1704,10 +2003,12 @@ footer span{
 
             </h1>
 
+
         </div>
 
 
         <div class="hero-bottom">
+
 
             <p class="hero-description">
 
@@ -1717,6 +2018,7 @@ footer span{
 
             </p>
 
+
             <div class="hero-scroll">
 
                 <span></span>
@@ -1725,12 +2027,16 @@ footer span{
 
             </div>
 
+
         </div>
+
 
     </div>
 
 
-    <div class="hero-right reveal">
+    <div
+        class="hero-right reveal">
+
 
         <div class="hero-circle"></div>
 
@@ -1775,16 +2081,19 @@ footer span{
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      MARQUEE
-========================= -->
+===================================================== -->
 
 <div class="marquee">
+
 
     <div class="marquee-track">
 
@@ -1814,14 +2123,18 @@ footer span{
 
     </div>
 
+
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
-<section class="section" id="about">
+<section
+    class="section"
+    id="about">
+
 
     <div class="section-header">
 
@@ -1838,6 +2151,7 @@ footer span{
 
     <div class="about">
 
+
         <div class="about-image reveal">
 
             <img
@@ -1848,6 +2162,7 @@ footer span{
 
 
         <div class="about-copy reveal">
+
 
             <div class="section-label">
                 A little about me
@@ -1888,6 +2203,7 @@ footer span{
 
             <div class="about-meta">
 
+
                 <div>
 
                     Based in
@@ -1920,20 +2236,27 @@ footer span{
 
                 </div>
 
+
             </div>
+
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
-<!-- =========================
-     STYLE DIRECTION
-========================= -->
+<!-- =====================================================
+     STYLE
+===================================================== -->
 
-<section class="section" id="style">
+<section
+    class="section"
+    id="style">
+
 
     <div class="section-header">
 
@@ -1953,6 +2276,7 @@ footer span{
 
         <article class="style-card reveal">
 
+
             <div class="style-image">
 
                 <img
@@ -1969,6 +2293,7 @@ footer span{
                     Modest
                 </h3>
 
+
                 <p>
 
                     Effortless silhouettes,
@@ -1979,10 +2304,12 @@ footer span{
 
             </div>
 
+
         </article>
 
 
         <article class="style-card reveal">
+
 
             <div class="style-image">
 
@@ -2000,6 +2327,7 @@ footer span{
                     Feminine
                 </h3>
 
+
                 <p>
 
                     Delicate details, graceful
@@ -2010,10 +2338,12 @@ footer span{
 
             </div>
 
+
         </article>
 
 
         <article class="style-card reveal">
+
 
             <div class="style-image">
 
@@ -2031,6 +2361,7 @@ footer span{
                     Modest
                 </h3>
 
+
                 <p>
 
                     Contemporary styling with
@@ -2041,17 +2372,19 @@ footer span{
 
             </div>
 
+
         </article>
 
 
     </div>
 
+
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      TIKTOK CONTENT
-========================= -->
+===================================================== -->
 
 <section
     class="section social-section"
@@ -2073,6 +2406,7 @@ footer span{
 
     <div class="social-intro reveal">
 
+
         <h2>
 
             See it<br>
@@ -2092,28 +2426,26 @@ footer span{
 
         </p>
 
+
     </div>
 
 
     <div class="social-feed">
 
 
-        <!-- =========================
-             TIKTOK 01
-             PHOTO POST
-        ========================== -->
+        <!-- TIKTOK 01 -->
 
         <article
-            class="tiktok-card photo-post reveal">
+            class="tiktok-card reveal">
 
 
             <div class="tiktok-frame">
 
                 <iframe
 
-                    src="https://www.tiktok.com/player/v1/7519550990819937592?controls=1&amp;description=1&amp;music_info=1&amp;rel=0"
+                    src="https://www.tiktok.com/player/v1/7519550990819937592?controls=1&amp;description=1&amp;music_info=1&amp;rel=0&amp;autoplay=0&amp;loop=1"
 
-                    title="Ariska Devina Azharyani TikTok photo post 01"
+                    title="Ariska TikTok photo slideshow"
 
                     loading="lazy"
 
@@ -2131,14 +2463,13 @@ footer span{
                 </span>
 
                 <span>
-                    @devazhar
+                    Photo + Sound
                 </span>
 
             </div>
 
 
             <a
-
                 class="tiktok-link"
 
                 href="https://www.tiktok.com/@devazhar/photo/7519550990819937592"
@@ -2155,9 +2486,7 @@ footer span{
         </article>
 
 
-        <!-- =========================
-             TIKTOK 02
-        ========================== -->
+        <!-- TIKTOK 02 -->
 
         <article
             class="tiktok-card reveal">
@@ -2169,7 +2498,7 @@ footer span{
 
                     src="https://www.tiktok.com/player/v1/7577007741479243015?controls=1&amp;description=1&amp;music_info=1&amp;rel=0&amp;loop=1&amp;autoplay=0"
 
-                    title="Ariska Devina Azharyani TikTok video 02"
+                    title="Ariska TikTok video 02"
 
                     loading="lazy"
 
@@ -2194,7 +2523,6 @@ footer span{
 
 
             <a
-
                 class="tiktok-link"
 
                 href="https://www.tiktok.com/@devazhar/video/7577007741479243015"
@@ -2211,9 +2539,7 @@ footer span{
         </article>
 
 
-        <!-- =========================
-             TIKTOK 03
-        ========================== -->
+        <!-- TIKTOK 03 -->
 
         <article
             class="tiktok-card reveal">
@@ -2225,7 +2551,7 @@ footer span{
 
                     src="https://www.tiktok.com/player/v1/7527241866832612664?controls=1&amp;description=1&amp;music_info=1&amp;rel=0&amp;loop=1&amp;autoplay=0"
 
-                    title="Ariska Devina Azharyani TikTok video 03"
+                    title="Ariska TikTok video 03"
 
                     loading="lazy"
 
@@ -2250,7 +2576,6 @@ footer span{
 
 
             <a
-
                 class="tiktok-link"
 
                 href="https://www.tiktok.com/@devazhar/video/7527241866832612664"
@@ -2267,9 +2592,7 @@ footer span{
         </article>
 
 
-        <!-- =========================
-             TIKTOK 04
-        ========================== -->
+        <!-- TIKTOK 04 / ENDORSEMENT -->
 
         <article
             class="tiktok-card reveal">
@@ -2281,7 +2604,7 @@ footer span{
 
                     src="https://www.tiktok.com/player/v1/7559546365794192696?controls=1&amp;description=1&amp;music_info=1&amp;rel=0&amp;loop=1&amp;autoplay=0"
 
-                    title="Ariska Devina Azharyani TikTok video 04"
+                    title="Ariska TikTok brand endorsement"
 
                     loading="lazy"
 
@@ -2299,14 +2622,13 @@ footer span{
                 </span>
 
                 <span>
-                    @devazhar
+                    Brand Content
                 </span>
 
             </div>
 
 
             <a
-
                 class="tiktok-link"
 
                 href="https://www.tiktok.com/@devazhar/video/7559546365794192696"
@@ -2328,8 +2650,8 @@ footer span{
 
     <div class="social-buttons">
 
-        <a
 
+        <a
             href="https://www.tiktok.com/@devazhar"
 
             target="_blank"
@@ -2347,17 +2669,19 @@ footer span{
 
         </a>
 
+
     </div>
 
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      STATEMENT
-========================= -->
+===================================================== -->
 
 <section class="statement">
+
 
     <p class="reveal">
 
@@ -2367,15 +2691,16 @@ footer span{
 
     </p>
 
+
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      LOOKBOOK
-========================= -->
+===================================================== -->
 
 <section
-    class="section"
+    class="section lookbook-section"
     id="lookbook">
 
 
@@ -2392,51 +2717,110 @@ footer span{
     </div>
 
 
-    <div class="lookbook-grid">
+    <div class="lookbook-intro reveal">
 
 
-        <div class="lookbook-main reveal">
+        <h2>
+
+            A visual<br>
+
+            <em>point of view.</em>
+
+        </h2>
+
+
+        <p>
+
+            Selected looks that reflect
+            Ariska’s approach to modern,
+            feminine and modest fashion.
+
+        </p>
+
+
+    </div>
+
+
+    <div class="lookbook-collage">
+
+
+        <!-- LOOK 01 -->
+
+        <div
+            class="lookbook-item lookbook-large reveal">
+
 
             <img
                 src="2.jpg"
-                alt="Ariska lookbook">
-
-        </div>
+                alt="Ariska lookbook 01">
 
 
-        <div class="lookbook-side">
+            <div class="lookbook-tag">
 
-
-            <div class="reveal">
-
-                <img
-                    src="7.jpg"
-                    alt="Ariska fashion look">
-
-            </div>
-
-
-            <div class="reveal">
-
-                <img
-                    src="10.jpg"
-                    alt="Ariska modest fashion">
+                Lookbook / 01
 
             </div>
 
 
         </div>
+
+
+        <!-- LOOK 02 -->
+
+        <div
+            class="lookbook-item lookbook-medium reveal">
+
+
+            <img
+                src="7.jpg"
+                alt="Ariska lookbook 02">
+
+
+            <div class="lookbook-tag">
+
+                Lookbook / 02
+
+            </div>
+
+
+        </div>
+
+
+        <!-- LOOK 03 -->
+
+        <div
+            class="lookbook-item lookbook-small reveal">
+
+
+            <img
+                src="10.jpg"
+                alt="Ariska lookbook 03">
+
+
+            <div class="lookbook-tag">
+
+                Lookbook / 03
+
+            </div>
+
+
+        </div>
+
 
     </div>
+
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      SKILLS
-========================= -->
+===================================================== -->
 
-<section class="section skills">
+<section
+    class="section skills-section"
+    id="skills">
+
 
     <div class="section-header">
 
@@ -2451,130 +2835,175 @@ footer span{
     </div>
 
 
-    <div class="skill-row reveal">
+    <div class="skills-heading reveal">
 
-        <div class="skill-number">
-            01
-        </div>
 
-        <div class="skill-name">
-            Canva
-        </div>
+        <h2>
 
-        <div class="skill-detail">
-            Visual Design
-        </div>
+            What I<br>
+
+            <em>bring.</em>
+
+        </h2>
+
+
+        <p>
+
+            A mix of creative tools,
+            content instincts and communication
+            skills built for digital fashion.
+
+        </p>
+
 
     </div>
 
 
-    <div class="skill-row reveal">
+    <div class="skills-grid">
 
-        <div class="skill-number">
-            02
+
+        <!-- 01 -->
+
+        <div class="skill-item reveal">
+
+            <div class="skill-number">
+                01
+            </div>
+
+            <div class="skill-name">
+                Canva
+            </div>
+
+            <div class="skill-detail">
+                Visual Design
+            </div>
+
         </div>
 
-        <div class="skill-name">
-            CapCut
+
+        <!-- 02 -->
+
+        <div class="skill-item reveal">
+
+            <div class="skill-number">
+                02
+            </div>
+
+            <div class="skill-name">
+                CapCut
+            </div>
+
+            <div class="skill-detail">
+                Video Editing
+            </div>
+
         </div>
 
-        <div class="skill-detail">
-            Video Editing
+
+        <!-- 03 -->
+
+        <div class="skill-item reveal">
+
+            <div class="skill-number">
+                03
+            </div>
+
+            <div class="skill-name">
+                Social Media
+            </div>
+
+            <div class="skill-detail">
+                Content
+            </div>
+
         </div>
+
+
+        <!-- 04 -->
+
+        <div class="skill-item reveal">
+
+            <div class="skill-number">
+                04
+            </div>
+
+            <div class="skill-name">
+                Content Strategy
+            </div>
+
+            <div class="skill-detail">
+                Strategy
+            </div>
+
+        </div>
+
+
+        <!-- 05 -->
+
+        <div class="skill-item reveal">
+
+            <div class="skill-number">
+                05
+            </div>
+
+            <div class="skill-name">
+                Content Curation
+            </div>
+
+            <div class="skill-detail">
+                Curation
+            </div>
+
+        </div>
+
+
+        <!-- 06 -->
+
+        <div class="skill-item reveal">
+
+            <div class="skill-number">
+                06
+            </div>
+
+            <div class="skill-name">
+                Trend Awareness
+            </div>
+
+            <div class="skill-detail">
+                Trend Insight
+            </div>
+
+        </div>
+
+
+        <!-- 07 -->
+
+        <div class="skill-item reveal">
+
+            <div class="skill-number">
+                07
+            </div>
+
+            <div class="skill-name">
+                Public Speaking
+            </div>
+
+            <div class="skill-detail">
+                Communication
+            </div>
+
+        </div>
+
 
     </div>
 
-
-    <div class="skill-row reveal">
-
-        <div class="skill-number">
-            03
-        </div>
-
-        <div class="skill-name">
-            Social Media Specialist
-        </div>
-
-        <div class="skill-detail">
-            Social Content
-        </div>
-
-    </div>
-
-
-    <div class="skill-row reveal">
-
-        <div class="skill-number">
-            04
-        </div>
-
-        <div class="skill-name">
-            Content Strategy
-        </div>
-
-        <div class="skill-detail">
-            Creative Strategy
-        </div>
-
-    </div>
-
-
-    <div class="skill-row reveal">
-
-        <div class="skill-number">
-            05
-        </div>
-
-        <div class="skill-name">
-            Content Curation
-        </div>
-
-        <div class="skill-detail">
-            Visual Curation
-        </div>
-
-    </div>
-
-
-    <div class="skill-row reveal">
-
-        <div class="skill-number">
-            06
-        </div>
-
-        <div class="skill-name">
-            Trend Awareness
-        </div>
-
-        <div class="skill-detail">
-            Trend & Content Insight
-        </div>
-
-    </div>
-
-
-    <div class="skill-row reveal">
-
-        <div class="skill-number">
-            07
-        </div>
-
-        <div class="skill-name">
-            Public Speaking
-        </div>
-
-        <div class="skill-detail">
-            Communication
-        </div>
-
-    </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      CONTACT
-========================= -->
+===================================================== -->
 
 <section
     class="contact"
@@ -2586,8 +3015,11 @@ footer span{
 
         <div class="reveal">
 
+
             <div class="section-label">
+
                 06 / Let's Work
+
             </div>
 
 
@@ -2601,10 +3033,12 @@ footer span{
 
             </h2>
 
+
         </div>
 
 
         <div class="contact-right reveal">
+
 
             <p>
 
@@ -2617,7 +3051,6 @@ footer span{
 
 
             <a
-
                 href="mailto:creatorhouseid@gmail.com"
 
                 class="contact-email">
@@ -2639,16 +3072,19 @@ footer span{
 
             </div>
 
+
         </div>
 
+
     </div>
+
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
@@ -2663,14 +3099,20 @@ footer span{
 </footer>
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
-/* =========================
+
+/* =========================================================
    MOBILE MENU
-========================= */
+========================================================= */
 
 const menuBtn =
     document.getElementById("menuBtn");
+
 
 const mobileMenu =
     document.getElementById("mobileMenu");
@@ -2696,9 +3138,9 @@ document
     });
 
 
-/* =========================
+/* =========================================================
    SCROLL REVEAL
-========================= */
+========================================================= */
 
 const revealElements =
     document.querySelectorAll(".reveal");
@@ -2741,9 +3183,9 @@ revealElements.forEach(element => {
 });
 
 
-/* =========================
-   SMOOTH ANCHOR
-========================= */
+/* =========================================================
+   SMOOTH ANCHORS
+========================================================= */
 
 document
     .querySelectorAll('a[href^="#"]')
@@ -2758,12 +3200,16 @@ document
                         this.getAttribute("href")
                     );
 
+
                 if(target){
 
                     e.preventDefault();
 
+
                     target.scrollIntoView({
+
                         behavior:"smooth"
+
                     });
 
                 }
@@ -2773,7 +3219,9 @@ document
 
     });
 
+
 </script>
+
 
 </body>
 </html>
