@@ -171,13 +171,13 @@
 
 
     /* =====================================================
-       MOBILE NAV BUTTON
+       MOBILE NAV
     ===================================================== */
 
     .mobile-nav-actions {
       display: none;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
     }
 
     .mobile-work {
@@ -198,6 +198,8 @@
 
       text-transform: uppercase;
       letter-spacing: 0.8px;
+
+      white-space: nowrap;
     }
 
     .menu-toggle {
@@ -214,6 +216,7 @@
       border-radius: 3px;
 
       cursor: pointer;
+      flex-shrink: 0;
     }
 
     .hamburger {
@@ -221,6 +224,7 @@
       height: 12px;
 
       position: relative;
+      display: block;
     }
 
     .hamburger span {
@@ -568,7 +572,6 @@
     }
 
     @keyframes slide {
-
       from {
         transform: translateX(0);
       }
@@ -576,7 +579,6 @@
       to {
         transform: translateX(-50%);
       }
-
     }
 
 
@@ -869,25 +871,38 @@
       gap: 12px;
     }
 
+    /*
+      IMPORTANT:
+      Each social-post is now an <a>.
+      So the entire card is clickable.
+    */
+
     .social-post {
       position: relative;
+
+      display: block;
 
       aspect-ratio: 0.72;
 
       overflow: hidden;
 
       background: var(--soft);
+
+      cursor: pointer;
     }
 
     .social-post img {
       width: 100%;
       height: 100%;
 
-      transition: transform 0.6s ease;
+      transition:
+        transform 0.7s ease,
+        filter 0.5s ease;
     }
 
     .social-post:hover img {
       transform: scale(1.045);
+      filter: brightness(0.84);
     }
 
     .social-post:nth-child(2) {
@@ -906,7 +921,7 @@
 
       padding: 7px 9px;
 
-      background: rgba(250, 249, 245, 0.9);
+      background: rgba(250, 249, 245, 0.92);
 
       font-size: 8px;
       font-weight: 700;
@@ -932,6 +947,50 @@
       font-weight: 600;
 
       line-height: 1.35;
+
+      z-index: 2;
+
+      transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+    }
+
+    .social-post:hover .post-caption {
+      transform: translateY(-4px);
+      background: white;
+    }
+
+    .post-arrow {
+      position: absolute;
+
+      right: 15px;
+      top: 15px;
+
+      width: 30px;
+      height: 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--ink);
+      color: white;
+
+      border-radius: 50%;
+
+      font-size: 12px;
+
+      z-index: 3;
+
+      opacity: 0;
+      transform: translateY(5px);
+
+      transition: 0.3s ease;
+    }
+
+    .social-post:hover .post-arrow {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .social-bottom {
@@ -1378,10 +1437,7 @@
         margin-top: 0;
       }
 
-      .social-post:nth-child(3) {
-        margin-top: 30px;
-      }
-
+      .social-post:nth-child(3),
       .social-post:nth-child(4) {
         margin-top: 30px;
       }
@@ -1730,6 +1786,19 @@
         font-size: 8px;
       }
 
+      .post-arrow {
+        width: 25px;
+        height: 25px;
+
+        right: 8px;
+        top: 8px;
+
+        font-size: 10px;
+
+        opacity: 1;
+        transform: none;
+      }
+
       .social-bottom {
         display: block;
 
@@ -1742,10 +1811,16 @@
 
       .social-buttons {
         margin-top: 15px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
       }
 
       .social-button {
-        padding: 10px 12px;
+        width: 100%;
+        text-align: center;
+
+        padding: 11px 8px;
 
         font-size: 8px;
       }
@@ -1963,7 +2038,7 @@
 
 
   <!-- =====================================================
-       DESKTOP NAV
+       NAVIGATION
   ===================================================== -->
 
   <nav>
@@ -1975,39 +2050,23 @@
         <small>fashion creator</small>
       </a>
 
-
-      <!-- Desktop -->
-
       <div class="nav-menu">
 
-        <a href="#about">
-          About
-        </a>
+        <a href="#about">About</a>
 
-        <a href="#style">
-          Style
-        </a>
+        <a href="#style">Style</a>
 
-        <a href="#social">
-          Social
-        </a>
+        <a href="#social">Social</a>
 
-        <a href="#looks">
-          Looks
-        </a>
+        <a href="#looks">Looks</a>
 
-        <a href="#skills">
-          Skills
-        </a>
+        <a href="#skills">Skills</a>
 
         <a href="#contact" class="nav-cta">
           Work With Me
         </a>
 
       </div>
-
-
-      <!-- Mobile -->
 
       <div class="mobile-nav-actions">
 
@@ -2020,14 +2079,13 @@
           id="menuToggle"
           aria-label="Open navigation"
           aria-expanded="false"
+          type="button"
         >
 
           <span class="hamburger">
-
             <span></span>
             <span></span>
             <span></span>
-
           </span>
 
         </button>
@@ -2041,7 +2099,7 @@
 
   <!-- =====================================================
        MOBILE MENU
-  ===================================================== -->
+    ===================================================== -->
 
   <div class="mobile-menu" id="mobileMenu">
 
@@ -2080,45 +2138,30 @@
 
   <!-- =====================================================
        HERO
-  ===================================================== -->
+    ===================================================== -->
 
   <header class="hero" id="home">
 
     <div class="hero-inner">
 
-
       <div class="hero-copy reveal">
 
         <div class="hero-kicker">
-
           <span></span>
-
           Modest Fashion Creator
-
         </div>
 
-
         <h1 class="hero-title">
-
           WEAR<br>
-
           YOUR<br>
-
-          <span class="serif">
-            story.
-          </span>
-
+          <span class="serif">story.</span>
         </h1>
 
-
         <p class="hero-subtitle">
-
           Exploring modest, syar'i, feminine, and contemporary
           fashion through styling, visual storytelling, and
           social-first content.
-
         </p>
-
 
         <div class="hero-bottom">
 
@@ -2129,13 +2172,10 @@
             Explore Content ↗
           </a>
 
-
           <div class="hero-note">
-
             Fashion<br>
             Content<br>
             Storytelling
-
           </div>
 
         </div>
@@ -2154,7 +2194,6 @@
 
         </div>
 
-
         <div class="hero-secondary">
 
           <img
@@ -2164,18 +2203,12 @@
 
         </div>
 
-
         <div class="hero-label">
-
           modest / contemporary
-
         </div>
 
-
         <div class="hero-index">
-
           AR / 01
-
         </div>
 
       </div>
@@ -2187,52 +2220,23 @@
 
   <!-- =====================================================
        MARQUEE
-  ===================================================== -->
+    ===================================================== -->
 
   <div class="intro-strip">
 
     <div class="intro-track">
 
-      <div class="intro-item">
-        Modest Fashion
-      </div>
+      <div class="intro-item">Modest Fashion</div>
+      <div class="intro-item">Syar'i Style</div>
+      <div class="intro-item">Contemporary Fashion</div>
+      <div class="intro-item">Fashion Content</div>
+      <div class="intro-item">Social Storytelling</div>
 
-      <div class="intro-item">
-        Syar'i Style
-      </div>
-
-      <div class="intro-item">
-        Contemporary Fashion
-      </div>
-
-      <div class="intro-item">
-        Fashion Content
-      </div>
-
-      <div class="intro-item">
-        Social Storytelling
-      </div>
-
-
-      <div class="intro-item">
-        Modest Fashion
-      </div>
-
-      <div class="intro-item">
-        Syar'i Style
-      </div>
-
-      <div class="intro-item">
-        Contemporary Fashion
-      </div>
-
-      <div class="intro-item">
-        Fashion Content
-      </div>
-
-      <div class="intro-item">
-        Social Storytelling
-      </div>
+      <div class="intro-item">Modest Fashion</div>
+      <div class="intro-item">Syar'i Style</div>
+      <div class="intro-item">Contemporary Fashion</div>
+      <div class="intro-item">Fashion Content</div>
+      <div class="intro-item">Social Storytelling</div>
 
     </div>
 
@@ -2241,12 +2245,11 @@
 
   <!-- =====================================================
        ABOUT
-  ===================================================== -->
+    ===================================================== -->
 
   <section class="about" id="about">
 
     <div class="container about-grid">
-
 
       <div class="about-photo reveal">
 
@@ -2257,83 +2260,45 @@
 
       </div>
 
-
       <div class="about-copy reveal">
 
         <div class="section-meta">
-
           <span></span>
-
           01 / About
-
         </div>
 
-
         <h2>
-
-          Not one style.<br>
-
-          Just <em>her</em> style.
-
+          Her style.<br>
+          Her <em>way.</em>
         </h2>
 
-
         <p>
-
           Ariska is a fashion creator with a natural leaning
           toward modest and syar'i fashion, while staying open
           to modern and contemporary fashion expressions.
-
         </p>
 
-
         <p>
-
           Her content is rooted in wearable styling, visual
           details, and fashion moments that feel personal rather
           than overly curated.
-
         </p>
-
 
         <div class="about-facts">
 
           <div class="fact">
-
-            <strong>
-              Modest
-            </strong>
-
-            <span>
-              Core Direction
-            </span>
-
+            <strong>Modest</strong>
+            <span>Core Direction</span>
           </div>
 
-
           <div class="fact">
-
-            <strong>
-              Contemporary
-            </strong>
-
-            <span>
-              Open Direction
-            </span>
-
+            <strong>Contemporary</strong>
+            <span>Open Direction</span>
           </div>
 
-
           <div class="fact">
-
-            <strong>
-              Social-first
-            </strong>
-
-            <span>
-              Content Approach
-            </span>
-
+            <strong>Social-first</strong>
+            <span>Content Approach</span>
           </div>
 
         </div>
@@ -2346,53 +2311,39 @@
 
 
   <!-- =====================================================
-       STYLE DIRECTION
-  ===================================================== -->
+       STYLE DIRECTIONS
+    ===================================================== -->
 
   <section class="directions" id="style">
 
     <div class="container">
-
 
       <div class="direction-heading reveal">
 
         <div>
 
           <div class="section-meta">
-
             <span></span>
-
             02 / Style Direction
-
           </div>
 
-
           <h2>
-
             Different moods.<br>
-
-            <em>
-              Same point of view.
-            </em>
-
+            <em>Same point of view.</em>
           </h2>
 
         </div>
 
-
         <p>
-
           From everyday modest outfits to softer feminine
           styling and contemporary silhouettes, Ariska's
           content can move across different fashion moods.
-
         </p>
 
       </div>
 
 
       <div class="direction-grid">
-
 
         <article class="direction-card reveal">
 
@@ -2402,15 +2353,8 @@
           >
 
           <div class="direction-info">
-
-            <strong>
-              Everyday Modest
-            </strong>
-
-            <span>
-              01
-            </span>
-
+            <strong>Everyday Modest</strong>
+            <span>01</span>
           </div>
 
         </article>
@@ -2424,15 +2368,8 @@
           >
 
           <div class="direction-info">
-
-            <strong>
-              Soft & Feminine
-            </strong>
-
-            <span>
-              02
-            </span>
-
+            <strong>Soft & Feminine</strong>
+            <span>02</span>
           </div>
 
         </article>
@@ -2446,19 +2383,11 @@
           >
 
           <div class="direction-info">
-
-            <strong>
-              Modern Modest
-            </strong>
-
-            <span>
-              03
-            </span>
-
+            <strong>Modern Modest</strong>
+            <span>03</span>
           </div>
 
         </article>
-
 
       </div>
 
@@ -2469,93 +2398,125 @@
 
   <!-- =====================================================
        SOCIAL
-  ===================================================== -->
+    ===================================================== -->
 
   <section class="social" id="social">
 
     <div class="container">
-
 
       <div class="social-title reveal">
 
         <div>
 
           <div class="section-meta">
-
             <span></span>
-
             03 / Social Presence
-
           </div>
 
-
           <h2>
-
             Fashion<br>
-
-            <em>
-              in motion.
-            </em>
-
+            <em>in motion.</em>
           </h2>
 
         </div>
 
-
         <p>
-
           A look at how Ariska translates fashion into
           short-form videos, social content, styling moments,
           and visual storytelling.
-
         </p>
 
       </div>
 
 
+      <!-- =================================================
+           SOCIAL CONTENT CARDS
+
+           GANTI LINK DI href="" DENGAN LINK TIKTOK
+           ATAU INSTAGRAM MASING-MASING.
+
+           Contoh:
+           href="https://www.tiktok.com/@username/video/123456789"
+        ================================================= -->
+
+
       <div class="social-feed">
 
 
-        <article class="social-post reveal">
+        <!-- TIKTOK CONTENT 01 -->
+
+        <a
+          href="https://www.tiktok.com/"
+          class="social-post reveal"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Watch TikTok content"
+        >
 
           <span class="post-platform">
-            Instagram
+            TikTok
+          </span>
+
+          <span class="post-arrow">
+            ↗
           </span>
 
           <img
             src="15.jpg"
-            alt="Ariska Instagram content"
+            alt="Ariska TikTok fashion content"
           >
 
           <div class="post-caption">
             Outfit details & visual diary
           </div>
 
-        </article>
+        </a>
 
 
-        <article class="social-post reveal">
+        <!-- TIKTOK CONTENT 02 -->
+
+        <a
+          href="https://www.tiktok.com/"
+          class="social-post reveal"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Watch TikTok content"
+        >
 
           <span class="post-platform">
             TikTok
           </span>
 
+          <span class="post-arrow">
+            ↗
+          </span>
+
           <img
             src="10.jpg"
-            alt="Ariska TikTok content"
+            alt="Ariska TikTok styling content"
           >
 
           <div class="post-caption">
             Styling, transitions & fashion moments
           </div>
 
-        </article>
+        </a>
 
 
-        <article class="social-post reveal">
+        <!-- INSTAGRAM / OTHER CONTENT -->
+
+        <a
+          href="#"
+          class="social-post reveal"
+          aria-label="View fashion content"
+        >
 
           <span class="post-platform">
             Fashion
+          </span>
+
+          <span class="post-arrow">
+            ↗
           </span>
 
           <img
@@ -2567,13 +2528,23 @@
             Everyday looks with a point of view
           </div>
 
-        </article>
+        </a>
 
 
-        <article class="social-post reveal">
+        <!-- INSTAGRAM / OTHER CONTENT -->
+
+        <a
+          href="#"
+          class="social-post reveal"
+          aria-label="View social fashion content"
+        >
 
           <span class="post-platform">
             Content
+          </span>
+
+          <span class="post-arrow">
+            ↗
           </span>
 
           <img
@@ -2585,11 +2556,15 @@
             Details that make the look
           </div>
 
-        </article>
+        </a>
 
 
       </div>
 
+
+      <!-- =================================================
+           SOCIAL BUTTONS
+        ================================================= -->
 
       <div class="social-bottom reveal">
 
@@ -2597,21 +2572,27 @@
           Explore Ariska's social world
         </p>
 
-
         <div class="social-buttons">
 
-          <!-- Replace # with actual links -->
+          <!--
+            GANTI LINK DI SINI DENGAN PROFILE INSTAGRAM
+            DAN PROFILE TIKTOK
+          -->
 
           <a
             href="#"
             class="social-button"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Instagram ↗
           </a>
 
           <a
-            href="#"
+            href="https://www.tiktok.com/"
             class="social-button"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             TikTok ↗
           </a>
@@ -2627,7 +2608,7 @@
 
   <!-- =====================================================
        STATEMENT
-  ===================================================== -->
+    ===================================================== -->
 
   <section class="statement">
 
@@ -2637,13 +2618,9 @@
         The approach
       </div>
 
-
       <h2>
-
         Modest doesn't have<br>
-
         to mean <em>ordinary.</em>
-
       </h2>
 
     </div>
@@ -2653,44 +2630,31 @@
 
   <!-- =====================================================
        LOOKBOOK
-  ===================================================== -->
+    ===================================================== -->
 
   <section class="lookbook" id="looks">
 
     <div class="container">
-
 
       <div class="lookbook-header reveal">
 
         <div>
 
           <div class="section-meta">
-
             <span></span>
-
             04 / Selected Looks
-
           </div>
 
-
           <h2>
-
             The<br>
-
-            <em>
-              lookbook.
-            </em>
-
+            <em>lookbook.</em>
           </h2>
 
         </div>
 
-
         <p>
-
           A visual selection of looks that reflects Ariska's
           approach to modest and contemporary fashion.
-
         </p>
 
       </div>
@@ -2707,15 +2671,8 @@
           >
 
           <div class="look-info">
-
-            <span>
-              Look 01
-            </span>
-
-            <span>
-              Modest
-            </span>
-
+            <span>Look 01</span>
+            <span>Modest</span>
           </div>
 
         </article>
@@ -2729,15 +2686,8 @@
           >
 
           <div class="look-info">
-
-            <span>
-              Look 02
-            </span>
-
-            <span>
-              Feminine
-            </span>
-
+            <span>Look 02</span>
+            <span>Feminine</span>
           </div>
 
         </article>
@@ -2751,15 +2701,8 @@
           >
 
           <div class="look-info">
-
-            <span>
-              Look 03
-            </span>
-
-            <span>
-              Contemporary
-            </span>
-
+            <span>Look 03</span>
+            <span>Contemporary</span>
           </div>
 
         </article>
@@ -2774,7 +2717,7 @@
 
   <!-- =====================================================
        SKILLS
-  ===================================================== -->
+    ===================================================== -->
 
   <section class="skills" id="skills">
 
@@ -2784,29 +2727,19 @@
       <div class="skills-heading reveal">
 
         <div class="section-meta">
-
           <span></span>
-
           05 / Capabilities
-
         </div>
 
-
         <h2>
-
           More than<br>
-
           just a <em>face.</em>
-
         </h2>
 
-
         <p>
-
           Ariska understands both the visual side of fashion
           content and the social side of what makes content
           relevant, engaging, and worth watching.
-
         </p>
 
       </div>
@@ -2814,12 +2747,9 @@
 
       <div class="skills-list reveal">
 
-
         <div class="skill-row">
 
-          <span class="skill-number">
-            01
-          </span>
+          <span class="skill-number">01</span>
 
           <span class="skill-name">
             Canva
@@ -2834,9 +2764,7 @@
 
         <div class="skill-row">
 
-          <span class="skill-number">
-            02
-          </span>
+          <span class="skill-number">02</span>
 
           <span class="skill-name">
             CapCut
@@ -2851,9 +2779,7 @@
 
         <div class="skill-row">
 
-          <span class="skill-number">
-            03
-          </span>
+          <span class="skill-number">03</span>
 
           <span class="skill-name">
             Social Media Specialist
@@ -2868,9 +2794,7 @@
 
         <div class="skill-row">
 
-          <span class="skill-number">
-            04
-          </span>
+          <span class="skill-number">04</span>
 
           <span class="skill-name">
             Content Strategy
@@ -2885,9 +2809,7 @@
 
         <div class="skill-row">
 
-          <span class="skill-number">
-            05
-          </span>
+          <span class="skill-number">05</span>
 
           <span class="skill-name">
             Content Curation
@@ -2902,9 +2824,7 @@
 
         <div class="skill-row">
 
-          <span class="skill-number">
-            06
-          </span>
+          <span class="skill-number">06</span>
 
           <span class="skill-name">
             Trend & Content Awareness
@@ -2916,7 +2836,6 @@
 
         </div>
 
-
       </div>
 
     </div>
@@ -2926,21 +2845,17 @@
 
   <!-- =====================================================
        CONTACT
-  ===================================================== -->
+    ===================================================== -->
 
   <section class="contact" id="contact">
 
     <div class="contact-inner">
 
-
       <div class="contact-top">
 
-
         <div class="contact-label">
-
           Available for<br>
           fashion collaborations
-
         </div>
 
 
@@ -2950,15 +2865,11 @@
             Get in touch
           </div>
 
-
           <a href="mailto:creatorhouseid@gmail.com">
-
             creatorhouseid@gmail.com
-
           </a>
 
         </div>
-
 
       </div>
 
@@ -2988,7 +2899,6 @@
 
       </div>
 
-
     </div>
 
   </section>
@@ -2996,7 +2906,7 @@
 
   <!-- =====================================================
        JAVASCRIPT
-  ===================================================== -->
+    ===================================================== -->
 
   <script>
 
@@ -3063,7 +2973,9 @@
     }
 
 
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", (event) => {
+
+      event.stopPropagation();
 
       const isOpen =
         mobileMenu.classList.toggle("open");
@@ -3137,6 +3049,7 @@
 
       }
     );
+
 
   </script>
 
